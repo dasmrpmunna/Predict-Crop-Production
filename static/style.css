@@ -1,0 +1,204 @@
+body {
+    background-image: url("mmmm5.webp"), url("mm3.jpg"), url("mm1.jpg"), url("nn.jpeg");
+    background-position: top left, top right, bottom left, bottom right; /* Positioning images */
+    background-size: 50% 50%; /* Adjust size (Quarter screen each) */
+    background-repeat: no-repeat; /* Prevent repeating */
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+
+h1 {
+    color: #000004;
+    font-size: 35px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+
+
+.login {
+    width: 50%;
+    margin: 50px auto;
+    background: rgba(255, 255, 255, 0.2); /* Transparent White */
+    backdrop-filter: blur(10px); /* Glassmorphic Effect */
+    -webkit-backdrop-filter: blur(10px); /* Safari Support */
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.4), -8px -8px 20px rgba(255, 255, 255, 0.5);
+    transform: perspective(1000px) rotateX(5deg);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    color: white;
+}
+
+.login:hover {
+    transform: perspective(1000px) rotateX(0deg);
+}
+
+input[type="text"] {
+    width: 80%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    font-size: 16px;
+    outline: none;
+    background: #f9f9f9;
+    box-shadow: inset 3px 3px 6px rgba(0, 0, 0, 0.2), inset -3px -3px 6px rgba(255, 255, 255, 0.8);
+    transition: all 0.3s ease-in-out;
+}
+
+input[type="text"]:focus {
+    border-color: #0d6610;
+    box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.2), inset -2px -2px 5px rgba(255, 255, 255, 0.8);
+}
+
+button {
+    background-color: #0a4a0e;
+    color: white;
+    padding: 15px 50px;
+    font-size: 16px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    display: block;
+    width: 80%;
+    margin: 20px auto;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3), -4px -4px 10px rgba(255, 255, 255, 0.5);
+    transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+    background-color: #07290a;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3), -2px -2px 8px rgba(255, 255, 255, 0.5);
+    transform: scale(1.05);
+}
+
+footer {
+    position: relative;
+    width: 100%;
+    padding: 5px 0; /* Reduced padding to compress height */
+    background: rgba(255, 255, 255, 0.2); /* Light transparent background */
+    backdrop-filter: blur(10px); /* Glass effect */
+    text-align: center;
+    bottom: 0;
+    left: 0;
+    font-size: 18px; /* Slightly smaller text */
+    box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px; /* Space between icons and text */
+    height: 40px; /* Compressed height */
+}
+
+footer a {
+    text-decoration: none;
+    margin: 5px;
+    display: inline-block;
+}
+
+footer i {
+    transition: transform 0.3s ease-in-out;
+}
+
+footer i:hover {
+    transform: scale(1.2);
+}
+
+.footer-text {
+    font-family: 'Poppins', sans-serif;  /* Stylish font */
+    font-size: 22px;  /* Larger text */
+    font-weight: bold;  /* Bold text */
+    color: #121111;  /* Dark color for visibility */
+    margin-left: 15px;  /* Space between icons and text */
+    display: inline-flex;  /* Keep heart & text in one line */
+    align-items: center;  /* Align heart and text vertically */
+}
+
+
+
+.footer-text i {
+    margin-right: 5px;  /* Space between heart and name */
+    animation: heartbeat 1.5s infinite;  /* Heartbeat effect */
+}
+
+@keyframes heartbeat {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.6); }
+    100% { transform: scale(1); }
+}
+
+
+
+/* body {
+    background-image:url("crop production.jpg");
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    
+} */
+
+/* .login {
+    width: 50%;
+    margin: 50px auto;
+    background: linear-gradient(135deg, #ffffff, #e6e6e6);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3), -5px -5px 15px rgba(255, 255, 255, 0.6);
+    transform: perspective(1000px) rotateX(5deg);
+    transition: transform 0.3s ease-in-out;
+} */
+
+ /* .login {
+    width: 50%;
+    margin: 50px auto;
+    background: linear-gradient(135deg, #ff7eb3, #ff758c, #ff7eb3, #ff758c); 
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.4), -8px -8px 20px rgba(255, 255, 255, 0.5);
+    transform: perspective(1000px) rotateX(5deg);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    color: white;
+}  */
+
+/* .login {
+    width: 50%;
+    margin: 50px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 0px #0000001a;
+}
+
+
+input[type="text"] {
+    width: 80%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+button {
+    background-color: #4CAF50; 
+    margin : auto;
+    color: white;
+    padding: 15px 100px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-left:170pxs
+}
+
+button:hover {
+    background-color: #218838;
+} */
+

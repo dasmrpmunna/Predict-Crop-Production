@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Crop Prediction</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <!-- <link rel="stylesheet" type="text/css" href="static/stye.css"> -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+
+</head>
+<body>
+<div class="login">
+    <h1>Crops Prediction Model</h1>
+    <form action="{{url_for('predict')}}" method="post">
+        <input type="text" name="Nitrogen" placeholder="Nitrogen" required="required"/>
+        <input type="text" name="Phosphorus" placeholder="Phosphorus" required="required"/>
+        <input type="text" name="Potassium" placeholder="Potassium" required="required"/>
+        <input type="text" name="temperature" placeholder="Temperature" required="required"/>
+        <input type="text" name="humidity" placeholder="Humidity" required="required"/>
+        <input type="text" name="pH" placeholder="pH" required="required"/>
+        <input type="text" name="rainfall" placeholder="Rainfall" required="required"/>
+
+        <button type="Submit" class="btn btn-primary btn-block btn-large"> Click Predict</button>
+
+    </form>
+
+    <h1>
+        {{Prediction_text}}
+    </h1>
+
+</div>
+
+<footer style="text-align: center; margin-top: 20px;">
+
+    <!-- Heart Icon & Name -->
+    <span class="footer-text">
+        <i class="fas fa-heart" style="color: rgb(164, 19, 19);"></i> Munna Das
+    </span>
+
+    <!-- Linkedin -->
+    <a href="https://www.linkedin.com/in/dasmrpmunna/" target="_blank"><i class="fab fa-linkedin-in fa-2x" style="color: #119fec; margin: 10px;"></i></a>
+
+    <!-- Github -->
+    <a href="https://github.com/dasmrpmunna/" target="_blank"><i class="fab fa-github fa-2x" style="color: #252424; margin: 10px;"></i></a>
+
+    <!-- Facebook -->
+    <a href="https://www.facebook.com/dasmrpmunna/" target="_blank"><i class="fab fa-facebook-f fa-2x" style="color: #306df1; margin: 10px;"></i></a>
+
+    <!-- Instagram -->
+    <a href="https://www.linkedin.com/in/dasmrpmunna/" target="_blank"><i class="fab fa-instagram fa-2x" style="color: #e80ce8; margin: 10px;"></i></a>
+
+</footer> 
+
+</body>
+</html>
