@@ -2,29 +2,28 @@ import numpy as np
 from flask import Flask, request, render_template
 import pickle
 
-# app = Flask(__name__, static_folder="static")
+# Initialize Flask app
+app = Flask(__name__)
 
-#lode pickle model/file
-flask_app = Flask(__name__)
+# Load the trained model from the pickle file
 with open("model.pkl", "rb") as file:
     model = pickle.load(file)
 
-
-#create home route
-@flask_app.route("/")
-def Home():
+# Home route
+@app.route("/")
+def home():
     return render_template("index.html")
 
-
-#create predict route
-#When user submit the form then post request generate on predict rout
-@flask_app.route("/predict", methods=["POST"])
+# Predict route
+@app.route("/predict", methods=["POST"])
 def predict():
-    float_feature = [float(x) for x in request.form.values()]   #form value convert into float value
-    features= [np.array(float_feature)]
-    prediction = model.predict(features)
-    #it return result on html file
-    return render_template("index.html", Prediction_text="The Predicted Crops is: {}".format(prediction))
+    float_features = [float(x) for x in request.form.values()]  # Convert input values to float
+    features = [np.array(float_features)]
+    prediction = model.predict(features)  # Make prediction
 
+    # Return result to the HTML page
+    return render_template("index.html", Prediction_text="The Predicted Crop is: {}".format(prediction[0]))
+
+# Run the app
 if __name__ == "__main__":
-    flask_app.run(debug = True)
+    app.run(debug=True)
